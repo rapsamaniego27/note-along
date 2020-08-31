@@ -9,4 +9,46 @@
   justify-content:center;
   align-items: center;
  }
+
+ .option{
+  position:relative;
+
+  select{
+   padding:10px 50px 10px 10px;
+   margin:0 0.5rem;
+   background:var(--yellow);
+   border:none;
+   border-radius: 0.3rem;
+  }
+ }
+
+ /* Parent block of the arrow */
+ .option-arrow{
+  position:absolute;
+  top:0;
+  right:0;
+  display:block;
+  background:var(--accent);
+  height:100%;
+  width:3rem;
+  pointer-events: none;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+ }
+
+ /* The arrow is using Font Awesome icons */
+ .option-arrow::after{
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f107";
+  font-size:2rem;
+  color:var(--white);
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%, -50%);
+ }
+
+
+
 }

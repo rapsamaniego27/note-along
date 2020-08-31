@@ -1,5 +1,8 @@
 .note-display{
-
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
  .dot{
   width:0.5rem;
   height:0.5rem;

@@ -20,12 +20,12 @@
   <div id="wrapper">
     <div id="main">
       
-      <div class="app-heading__container">
-        <h1 class="app-heading">Note Along</h1>
-      </div>
-
       <div class="note-display" id="noteDisplay">
-        <span class="note hex-white head3" id="note">G#</span>
+        <div class="app-heading__container">
+          <h1 class="app-heading">Note Along</h1>
+        </div>
+
+        <span class="note hex-white head4 mt-30" id="note">G#</span>
         <ul class="interval-dots">
           <li class="dot dot--counted"></li>
           <li class="dot dot--counted"></li>
@@ -46,6 +46,7 @@
               <option value="naturals">Natural Notes</option>
               <option value="accidentals">Sharps and Flats</option>
             </select>
+            <span class="option-arrow"></span>
           </div>
         
           <!-- Row Interval -->
@@ -55,11 +56,12 @@
               <option value="4">4 seconds</option>
               <option value="5">5 seconds</option>
             </select>
+            <span class="option-arrow"></span>
           </div>
         </div>
 
         <!-- Button for the app -->
-        <button class="btn btn-primary">Start Exercise</button>
+        <button class="btn btn-accent mt-30" id="start">Start Exercise</button>
       </div>
 
       
