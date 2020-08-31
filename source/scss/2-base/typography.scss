@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6, .head1, .head2, .head3, .head4 {
 $text-elements: (
   'h1':(
     size:3rem,
-    mobile-size:2rem,
+    mobile-size:1.5rem,
     weight:var(--weight-bold)
   ),
   'h2':(
@@ -54,7 +54,7 @@ $text-elements: (
   ),
   '.head4':(
     size:6rem,
-    mobile-size:11vw, 
+    mobile-size:20vw, 
   ),
   '.blurb1':(
     size:0.875rem,
@@ -81,6 +81,10 @@ $text-elements: (
     size:1rem,
     mobile-size:0.875rem,
     weight:var(--weight-normal)
+  ),
+  '.option-label':(
+    size:1rem,
+    weight:var(--weight-bold)
   )
 
 );

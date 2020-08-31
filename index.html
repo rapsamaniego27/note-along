@@ -22,11 +22,11 @@
       
       <div class="note-display" id="noteDisplay">
         <div class="app-heading__container">
-          <h1 class="app-heading">Note Along</h1>
+          <h1 class="app-heading"><i class="fa fa-music"></i>ote Along</h1>
         </div>
 
         <span class="note hex-white head4 mt-30" id="note">G#</span>
-        <ul class="interval-dots">
+        <ul class="interval-dots" id="dots">
           <li class="dot dot--counted"></li>
           <li class="dot dot--counted"></li>
           <li class="dot"></li>
@@ -41,7 +41,8 @@
         <div class="app-options">
           <!-- Row Note Set -->
           <div class="option" id="noteSet">
-            <select name="" id="">
+            <label for="noteSet" class="option-label">Note set:</label>
+            <select name="note-set" id="noteSet">
               <option value="chromatic">Chromatic Scale</option>
               <option value="naturals">Natural Notes</option>
               <option value="accidentals">Sharps and Flats</option>
@@ -51,7 +52,8 @@
         
           <!-- Row Interval -->
           <div class="option" id="intervals">
-            <select name="" id="">
+            <label for="interval" class="option-label">Interval:</label>
+            <select name="interval" id="interval">
               <option value="3">3 seconds</option>
               <option value="4">4 seconds</option>
               <option value="5">5 seconds</option>

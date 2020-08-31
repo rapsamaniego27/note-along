@@ -17,6 +17,11 @@ body{
   align-items: center;
   flex-direction: column;
   height:76vh;
+
+  @media #{$device-sm}{
+    height:90vh;
+    justify-content: space-between;
+  }
 }
 
 

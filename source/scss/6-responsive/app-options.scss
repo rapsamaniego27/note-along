@@ -1,0 +1,17 @@
+
+@media #{$device-sm} {
+  .app-options{
+    flex-direction: column;
+  }
+
+  .option{
+    width:90vw;
+    margin-top:2.25rem;
+  }
+
+}
+
+@media #{$device-xs} {
+ /* Insert code mobile size here */
+
+}
