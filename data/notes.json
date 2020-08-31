@@ -1,0 +1,55 @@
+[
+ {
+  "note": "A",
+  "type": "natural"
+ },
+ {
+  "note": "Bb",
+  "type": "accidental",
+  "alternate" : "A#"
+ },
+ {
+  "note": "B",
+  "type": "natural"
+ },
+ {
+  "note": "C",
+  "type": "natural"
+ },
+ {
+  "note": "Db",
+  "type": "accidental",
+  "alternate" : "C#"
+ },
+ {
+  "note": "D",
+  "type": "natural"
+ },
+ {
+  "note": "Eb",
+  "type": "accidental",
+  "alternate" : "D#"
+ },
+ {
+  "note": "E",
+  "type": "natural"
+ },
+ {
+  "note": "F",
+  "type": "natural"
+ },
+ {
+  "note": "F#",
+  "type": "accidental",
+  "alternate" : "Gb"
+ },
+ {
+  "note": "G",
+  "type": "natural"
+ },
+ {
+  "note": "G#",
+  "type": "accidental",
+  "alternate" : "Ab"
+ }
+]
