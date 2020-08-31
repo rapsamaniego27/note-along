@@ -18,131 +18,60 @@
 
 <body>
   <div id="wrapper">
-    <header>
-      <!-- Header here -->
-    </header>
     <div id="main">
-      <center style="padding:20px 0 0 0;">
-        <h1 class="mt-1"><i class="fa fa-user"></i> Content here</h1>
-        <h2 class="mt-1"><i class="fa fa-user"></i> Content here</h2>
-        <h3 class="mt-1"><i class="fa fa-user"></i> Content here</h3>
-        <h4 class="mt-1"><i class="fa fa-user"></i> Content here</h4>
-        <h5 class="mt-1"><i class="fa fa-user"></i> Content here</h5>
-        <h6 class="mt-1"><i class="fa fa-user"></i> Content here</h6>
-        <div class="head4">This is heading 4</div>
-        <div class="head3">This is heading 3</div>
-        <div class="head2">This is heading 2</div>
-        <div class="head1">This is heading 1</div>
-      </center>
-
-      <div class="grid-container container__flex mt-90 mt-xs-20">
-        <div class="col-1 grid-content">
-          <h3>Col 1 </h3>
-          <div class="gut-15">
-            <p>
-              cols Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nobis obcaecati.
-            </p>
-          </div>
-        </div>
-        <div class="col-1 grid-content">
-          <h3>Col 1 </h3>
-          <div class="gut-15">
-            <p>
-              cols Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nobis obcaecati.
-            </p>
-          </div>
-        </div>
-        <div class="col-2 grid-content">
-          <h3>Col 2 </h3>
-          <div class="gut-15">
-            <p>
-              cols Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nobis obcaecati.
-            </p>
-          </div>
-        </div>
-        <div class="col-8  grid-content">
-          <h3>Col 8 </h3>
-          <div class="gut-15">
-            <p>
-              cols Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nobis obcaecati.
-            </p>
-          </div>
-        </div>
+      
+      <div class="app-heading__container">
+        <h1 class="app-heading">Note Along</h1>
       </div>
 
-      <div class="grid__custom mt-1 container__flex">
-        <div class="col-lg2 grid__custom__content">
-          <h3>Col LG 2 </h3>
-          <div class="gut-15">
-            <p>
-              cols Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nobis obcaecati.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg5 grid__custom__content">
-          <h3>Col LG 5 </h3>
-          <div class="gut-15">
-            <p>
-              cols Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nobis obcaecati.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg5 grid__custom__content">
-          <h3>Col LG 5 </h3>
-          <div class="gut-15">
-            <p>
-              cols Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nobis obcaecati.
-            </p>
-          </div>
-        </div>
+      <div class="note-display" id="noteDisplay">
+        <span class="note hex-white head3" id="note">G#</span>
+        <ul class="interval-dots">
+          <li class="dot dot--counted"></li>
+          <li class="dot dot--counted"></li>
+          <li class="dot"></li>
+          <li class="dot"></li>
+          <li class="dot"></li>
+        </ul>
       </div>
 
-      <div class="grid__custom mt-1 container__flex">
-        <div class="col-lg3 col-md6 col-sm3 grid__custom__content">
-          <h3>Col LG 3 </h3>
-          <div class="gut-15">
-            <p>
-              cols Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nobis obcaecati.
-            </p>
+      <div class="app">
+
+        <!-- Options for the app -->
+        <div class="app-options">
+          <!-- Row Note Set -->
+          <div class="option" id="noteSet">
+            <select name="" id="">
+              <option value="chromatic">Chromatic Scale</option>
+              <option value="naturals">Natural Notes</option>
+              <option value="accidentals">Sharps and Flats</option>
+            </select>
+          </div>
+        
+          <!-- Row Interval -->
+          <div class="option" id="intervals">
+            <select name="" id="">
+              <option value="3">3 seconds</option>
+              <option value="4">4 seconds</option>
+              <option value="5">5 seconds</option>
+            </select>
           </div>
         </div>
-        <div class="col-lg3 col-md6 col-sm3 grid__custom__content">
-          <h3>Col LG 3 </h3>
-          <div class="gut-15">
-            <p>
-              cols Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nobis obcaecati.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg3 col-md6 col-sm3 grid__custom__content">
-          <h3>Col LG 3 </h3>
-          <div class="gut-15">
-            <p>
-              cols Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nobis obcaecati.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg3 col-md6 col-sm3 grid__custom__content">
-          <h3>Col LG 3 </h3>
-          <div class="gut-15">
-            <p>
-              cols Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nobis obcaecati.
-            </p>
-          </div>
-        </div>
+
+        <!-- Button for the app -->
+        <button class="btn btn-primary">Start Exercise</button>
       </div>
 
-
-      <div class="buttons-container m-auto pt-2">
-        <a href="#" class="btn btn-success">Success</a>
-        <a href="#" class="btn btn-danger">Danger</a>
-        <a href="#" class="btn btn-info">Info</a>
-        <a href="#" class="btn btn-warning">Warning</a>
-      </div>
+      
+      <footer>
+        <p class="footer-texts">All rights reserved &copy; Rap Samaniego</p>
+        <div class="footer__social-media-links">
+          <a href="#" class="social-media"><i class="fa fa-facebook-f"></i></a>
+          <a href="#" class="social-media"><i class="fa fa-twitter"></i></a>
+        </div>
+      </footer>
     </div>
-    <footer>
-      footer
-    </footer>
+    
   </div>
 
   <!-- Row Scripts -->

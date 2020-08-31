@@ -1,0 +1,22 @@
+.note-display{
+
+ .dot{
+  width:0.5rem;
+  height:0.5rem;
+  border-radius: 50%;
+  background:var(--white);
+  display:inline-block;
+  margin:0 0.5rem;
+
+ }
+
+ .interval-dots{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+ }
+
+ .dot--counted{
+   background:var(--accent) !important;
+  }
+}

@@ -1,14 +1,22 @@
+body{
+  background:url(../images/music-background.jpg) center no-repeat;
+}
+
 #wrapper{
   display:flex;
   flex-direction: column;
-  height: 100%;
+  justify-content: center;
+  height: 100vh;
+  width:100vw;
+  background-color:rgba(var(--black-rgb), 0.850);
 }
 
 #main{
-  flex: 1 0 auto;
+  display:flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: column;
+  height:84vh;
 }
 
 
-footer{
-  flex-shrink: 0;
-}

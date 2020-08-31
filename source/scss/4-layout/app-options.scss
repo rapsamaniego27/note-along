@@ -1,0 +1,12 @@
+.app{
+ display:flex;
+ justify-content:center;
+ align-items: center;
+ flex-direction: column;
+
+ .app-options{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+ }
+}
