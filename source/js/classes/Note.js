@@ -1,27 +1,17 @@
 class NoteController{
- construct(name){
-  this.name = name;
+ construct(){
+  
  }
 
  //Methods
  generate(interval){
   UI.hideStart();
+  UI.disableOptions(true);
   let increment= 0;
   const limit = interval.value;
+  const intervalAdapter = new IntervalAdapter();
 
-  const dotInterval = setInterval(() => {
-   /* Checks to see if interval is greater */
-   if (increment >= limit) {
-    UI.unshadeDots(increment);
-    increment = 0;
-   }
-
-   UI.shadeDot(increment);
-   increment++
-
-  }, 1000);
-
-  UI.bindStop(dotInterval);
+  intervalAdapter.run(increment, limit);
 
  }
 

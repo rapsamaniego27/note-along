@@ -57,7 +57,21 @@ const UI = (function(){
       clearInterval(interval);
       this.unshadeDots(numDots);
       this.revealStart();
+      this.disableOptions(false);
     });
+   },
+   disableOptions:function(condition){
+    const options = document.querySelectorAll('select');
+
+    /* A true or false value is passed in this function */
+    options.forEach(option => {
+     if(condition == true){
+      option.setAttribute("disabled", "");
+     }else{
+      option.removeAttribute("disabled");
+     }
+    });
+
    }
   
    
