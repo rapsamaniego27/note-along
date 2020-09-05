@@ -29,6 +29,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
 
 startBtn.addEventListener('click', (e)=>{
  e.preventDefault();
+ Sounds.decide();
  noteController.generate(interval);
  
 });

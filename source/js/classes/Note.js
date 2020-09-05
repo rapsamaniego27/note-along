@@ -12,7 +12,7 @@ class NoteController{
 
   /* Displays the initial note */
   const setValue = noteSet.options[noteSet.selectedIndex].value; 
-  setAdapter.fetchNoteSet(setValue);
+  setAdapter.fetchNoteSet(setValue, 0);
 
   /* Displays a note for every nth seconds */
   /* Depends on what interval the user chooses */

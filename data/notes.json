@@ -1,18 +1,5 @@
 [
  {
-  "name": "A",
-  "type": "natural"
- },
- {
-  "name": "Bb",
-  "type": "accidental",
-  "alternate" : "A#"
- },
- {
-  "name": "B",
-  "type": "natural"
- },
- {
   "name": "C",
   "type": "natural"
  },
@@ -51,5 +38,18 @@
   "name": "G#",
   "type": "accidental",
   "alternate" : "Ab"
+ },
+ {
+  "name": "A",
+  "type": "natural"
+ },
+ {
+  "name": "Bb",
+  "type": "accidental",
+  "alternate": "A#"
+ },
+ {
+  "name": "B",
+  "type": "natural"
  }
 ]

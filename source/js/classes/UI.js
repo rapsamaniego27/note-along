@@ -54,7 +54,7 @@ const UI = (function(){
 
     stopBtn.addEventListener('click', (e)=> {
       e.preventDefault();
-
+      Sounds.cancel();
       /* Resets everything interval is cleared or user has clicked Stop */
       clearInterval(interval);
       this.drawNote();

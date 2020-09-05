@@ -1,9 +1,7 @@
 class Data{
  construct(){
-
+  
  }
-
- //Methods
 
  /* Converts notes to json */
 async getNotes(){

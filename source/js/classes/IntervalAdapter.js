@@ -5,23 +5,35 @@ class IntervalAdapter{
 
  //Methods
  run(increment, limit, setValue){
+  let notesShown = 1;
 
   const dotInterval = setInterval(() => {
-   
+
    /* Checks to see if interval is greater */
    if (increment >= limit) {
+    /* Fetches a noteset and automatically runs it */
+    setAdapter.fetchNoteSet(setValue, notesShown);
+
+    if(notesShown >= 11){
+      notesShown = 0
+    }else{
+     notesShown++;
+    }
+    
+    
+    console.log(notesShown);
     UI.unshadeDots(increment);
     increment = 0;
-
-    
-    setAdapter.fetchNoteSet(setValue);
    }
 
+   Sounds.beep();
    UI.shadeDot(increment);
    increment++
-
+   
   }, 1000);
-
+  
+ 
+  /* Binds a clearInterval function to the UI */
   UI.bindStop(dotInterval, increment);
  }
 }
