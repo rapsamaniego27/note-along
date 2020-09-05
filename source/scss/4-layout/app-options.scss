@@ -23,7 +23,7 @@
    font-size:1rem;
 
    &:focus{
-    box-shadow: 0 0 3px 3px var(--accent);
+    box-shadow: 0 0 2px 2px var(--accent);
     outline:0;
 
     +.option-arrow::after{

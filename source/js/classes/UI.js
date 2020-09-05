@@ -38,7 +38,7 @@ const UI = (function(){
    },
    shadeDot:function(number){
     const dots = document.querySelectorAll('.dot');
-    console.log(number);
+   /*  console.log(number); */
     //console.log(number);
     dots[number].classList.add('dot--counted');
    },
@@ -54,7 +54,10 @@ const UI = (function(){
 
     stopBtn.addEventListener('click', (e)=> {
       e.preventDefault();
+
+      /* Resets everything interval is cleared or user has clicked Stop */
       clearInterval(interval);
+      this.drawNote();
       this.unshadeDots(numDots);
       this.revealStart();
       this.disableOptions(false);
@@ -72,6 +75,13 @@ const UI = (function(){
      }
     });
 
+   },
+   drawNote:function(note){
+     /* Returns 2 dashes if note is empty */
+    if(note)
+      return noteElement.innerHTML = `${note.name}`;
+      return noteElement.innerHTML = '--';
+      
    }
   
    
