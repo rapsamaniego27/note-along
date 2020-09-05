@@ -30,7 +30,13 @@ window.addEventListener('DOMContentLoaded', ()=> {
 startBtn.addEventListener('click', (e)=>{
  e.preventDefault();
  Sounds.decide();
- noteController.generate(interval);
+ const nextElement = e.target.nextElementSibling;
+ UI.freezeDelay(nextElement);
+
+const setValue = noteSet.options[noteSet.selectedIndex].value; 
+
+
+ noteController.generate(interval, setValue);
  
 });
 

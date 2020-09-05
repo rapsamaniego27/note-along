@@ -15,6 +15,15 @@ const Sounds = (function(){
    },
    cancel: function () {
     cancel.start();
+
+    /* Stop sounds after this sound has ended */
+    this.stopSounds();
+
+   },
+   stopSounds(){
+    snare.stop();
+    decide.stop();
+    cancel.stop();
    }
   }
   

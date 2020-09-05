@@ -54,13 +54,17 @@ const UI = (function(){
 
     stopBtn.addEventListener('click', (e)=> {
       e.preventDefault();
+      const previousElement = e.target.previousElementSibling;
+
       Sounds.cancel();
       /* Resets everything interval is cleared or user has clicked Stop */
       clearInterval(interval);
+      
       this.drawNote();
       this.unshadeDots(numDots);
       this.revealStart();
       this.disableOptions(false);
+      this.freezeDelay(previousElement);
     });
    },
    disableOptions:function(condition){
@@ -82,10 +86,16 @@ const UI = (function(){
       return noteElement.innerHTML = `${note.name}`;
       return noteElement.innerHTML = '--';
       
+   },
+   freezeDelay:function(element){
+     /* Freezes for 1 seconds then removes the freeze class 
+     to prevent users from spamming the clicks */
+     element.classList.add('freeze');
+     setTimeout(() => {
+       element.classList.remove('freeze');
+     }, 500);
    }
   
-   
-
   }
   
 })(); 

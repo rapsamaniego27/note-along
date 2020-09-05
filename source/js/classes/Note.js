@@ -4,14 +4,14 @@ class NoteController{
  }
 
  //Methods
- generate(interval, set){
+ generate(interval, setValue){
   UI.hideStart();
   UI.disableOptions(true);
+
   let increment= 0;
   const limit = interval.value;
 
   /* Displays the initial note */
-  const setValue = noteSet.options[noteSet.selectedIndex].value; 
   setAdapter.fetchNoteSet(setValue, 0);
 
   /* Displays a note for every nth seconds */

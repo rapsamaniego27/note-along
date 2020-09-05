@@ -14,12 +14,12 @@ class IntervalAdapter{
     /* Fetches a noteset and automatically runs it */
     setAdapter.fetchNoteSet(setValue, notesShown);
 
+    /* Specified for Circle of Fifths */
     if(notesShown >= 11){
       notesShown = 0
     }else{
      notesShown++;
     }
-    
     
     console.log(notesShown);
     UI.unshadeDots(increment);
@@ -34,6 +34,6 @@ class IntervalAdapter{
   
  
   /* Binds a clearInterval function to the UI */
-  UI.bindStop(dotInterval, increment);
+  UI.bindStop(dotInterval, increment, notesShown);
  }
 }
