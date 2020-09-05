@@ -1,21 +1,21 @@
 
 const Sounds = (function(){
  /* Private Methods */
- const snare = new Audio('../audio/snare-lofi01.mp3');
- const decide = new Audio('../audio/decide.mp3');
- const cancel = new Audio('../audio/cancel.mp3');
+ const snare = new Tone.Player('../audio/snare-lofi01.mp3').toMaster();
+ const decide = new Tone.Player('../audio/decide.mp3').toMaster();
+ const cancel = new Tone.Player('../audio/cancel.mp3').toMaster();
 
   /* Public Methods */
   return{
    beep:function(){
-    snare.play();
+    snare.start();
    },
    decide:function(){
-    decide.play();
+    decide.start();
    },
    cancel: function () {
-    cancel.play();
-   },
+    cancel.start();
+   }
   }
   
 })(); 

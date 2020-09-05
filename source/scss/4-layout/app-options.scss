@@ -69,5 +69,9 @@
   display:inline-block;
   position:absolute;
   top:-100%;
+
+  @media #{$device-sm}{
+   top: -111%;
+  }
  }
 }
