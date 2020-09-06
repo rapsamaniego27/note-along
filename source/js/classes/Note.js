@@ -4,7 +4,7 @@ class NoteController{
  }
 
  //Methods
- generate(interval, setValue){
+ run(interval, setValue){
   UI.hideStart();
   UI.disableOptions(true);
 
@@ -24,7 +24,5 @@ class NoteController{
   const value = element.value;
   console.log(value);
  }
-
-
 
 }

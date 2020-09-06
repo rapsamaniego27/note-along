@@ -4,6 +4,8 @@ const UI = (function(){
    start: '#start',
    stop: '#stop'
   }
+
+  const data = new Data();
   
   /* Public Methods */
   return{
@@ -94,8 +96,48 @@ const UI = (function(){
      setTimeout(() => {
        element.classList.remove('freeze');
      }, 500);
-   }
+   },
+   populateNoteSets:function(noteSetElement){
+     let html;
+     /* Gets the Note sets from the Data Object */
+     data.getNoteSets()
+         .then(noteSets => {
+
+           noteSets.forEach(set => {
+             html += `
+              <option value="${set.name}">${set.label}</option>
+             `
+           });
+
+           /* put inside this element */
+           noteSetElement.innerHTML = html;
+
+         })
+         .catch(err => console.log(err));
+   },
+  populateIntervals: function (intervalsElement) {
+      let html;
+
+  /* Gets the Intervals from the Data Object */
+      data.getIntervals()
+        .then(intervals => {
+          intervals.forEach(interval => {
+            html += `
+              <option value="${interval.value}">${interval.label}</option>
+             `
+          });
+          /* put inside this element */
+          intervalsElement.innerHTML = html;
+
+        })
+        .then(() => {
+          const intervalValue = parseInt(intervalsElement.options[0].value);
+          this.displayDots(intervalValue);
+        })
+        .catch(err => console.log(err));
+    }
   
   }
   
 })(); 
+

@@ -9,13 +9,15 @@ const Sounds = (function(){
   return{
    beep:function(){
     snare.start();
+    snare.volume.value = -5;
+
    },
    decide:function(){
     decide.start();
    },
    cancel: function () {
     cancel.play();
-    
+
     /* Stop sounds after this sound has ended */
     this.stopSounds();
 

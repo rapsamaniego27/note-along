@@ -13,9 +13,12 @@ const setAdapter = new SetAdapter();
 /* Load these when window is finished loading */
 window.addEventListener('DOMContentLoaded', ()=> {
   UI.revealStart();
-  const intervalValue = parseInt(interval.options[0].value);
-
-  UI.displayDots(intervalValue);
+  
+  
+  /* Populate Data */
+  UI.populateNoteSets(noteSet);
+  UI.populateIntervals(interval);
+  
 
   interval.addEventListener('change', (e)=> {
    const value = e.target.value;
@@ -33,10 +36,10 @@ startBtn.addEventListener('click', (e)=>{
  const nextElement = e.target.nextElementSibling;
  UI.freezeDelay(nextElement);
 
-const setValue = noteSet.options[noteSet.selectedIndex].value; 
+ const setValue = noteSet.options[noteSet.selectedIndex].value; 
 
 
- noteController.generate(interval, setValue);
+ noteController.run(interval, setValue);
  
 });
 
