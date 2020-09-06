@@ -23,7 +23,7 @@
   <div id="wrapper">
     <div id="main">
       
-      <div class="note-display" id="noteDisplay">
+      <div class="note-display mt-sm-30" id="noteDisplay">
         <div class="app-heading__container">
           <h1 class="app-heading"><i class="fa fa-music"></i>ote Along</h1>
         </div>
@@ -54,6 +54,17 @@
             <select name="interval" id="interval">
               <!-- Insert Intervals here through json -->
 
+            </select>
+            <span class="option-arrow"></span>
+          </div>
+
+          <div class="option mt-40" id="noteSounds">
+            <label for="interval" class="option-label">Note Sounds:</label>
+            <select name="interval" id="interval">
+              <!-- Insert Intervals here through json -->
+              <option value="off">Off</option>
+              <option value="first">Play at the first sec</option>
+              <option value="last">Play at the last sec</option>
             </select>
             <span class="option-arrow"></span>
           </div>

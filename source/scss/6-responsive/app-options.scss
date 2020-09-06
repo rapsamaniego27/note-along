@@ -2,6 +2,7 @@
 @media #{$device-xs} {
   .app-options{
     flex-direction: column;
+    width:100vw !important;
   }
 
   .option{
