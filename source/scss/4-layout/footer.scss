@@ -36,4 +36,15 @@ footer{
   .footer-texts{
     font-size:14px;
   }
+
+  .footer-sublinks{
+    display:flex;
+    justify-content: center;
+    
+    .sublink{
+      padding: 0 10px;
+      font-size:14px;
+      color:var(--white);
+    }
+  }
 }
