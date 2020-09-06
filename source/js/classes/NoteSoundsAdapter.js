@@ -11,9 +11,11 @@ class NoteSoundsAdapter{
   
   switch (optionValue) {
    case 'off':
+    /* Do nothing */
 
     break;
    case 'first':
+    
     this.playNote(note);
     break;
    
