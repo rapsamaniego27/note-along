@@ -61,12 +61,15 @@ const UI = (function(){
       Sounds.cancel();
       /* Resets everything interval is cleared or user has clicked Stop */
       clearInterval(interval);
-      
+
+      this.deactivateDots(dots);
       this.drawNote();
       this.unshadeDots(numDots);
       this.revealStart();
       this.disableOptions(false);
       this.freezeDelay(previousElement);
+      
+
     });
    },
    disableOptions:function(condition){
@@ -135,6 +138,12 @@ const UI = (function(){
           this.displayDots(intervalValue);
         })
         .catch(err => console.log(err));
+    },
+    activateDots: function(element){
+      element.classList.add('dot--active');
+    },
+    deactivateDots: function (element) {
+      element.classList.remove('dot--active');
     }
   
   }

@@ -5,6 +5,7 @@ class IntervalAdapter{
 
  //Methods
  run(increment, limit, setValue){
+  /* Used for Circle of fifths to track array count */
   let notesShown = 1;
 
   const dotInterval = setInterval(() => {
@@ -13,7 +14,8 @@ class IntervalAdapter{
    if (increment >= limit) {
     /* Fetches a noteset and automatically runs it */
     setAdapter.fetchNoteSet(setValue, notesShown);
-
+    
+    
     /* Specified for Circle of Fifths */
     if(notesShown >= 11){
       notesShown = 0
@@ -21,11 +23,11 @@ class IntervalAdapter{
      notesShown++;
     }
     
-    console.log(notesShown);
     UI.unshadeDots(increment);
     increment = 0;
    }
 
+   /* Defaults when interval is running */
    Sounds.beep();
    UI.shadeDot(increment);
    increment++

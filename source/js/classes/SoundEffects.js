@@ -9,7 +9,7 @@ const Sounds = (function(){
   return{
    beep:function(){
     snare.start();
-    snare.volume.value = -5;
+    snare.volume.value = -15;
 
    },
    decide:function(){
