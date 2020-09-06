@@ -4,7 +4,7 @@ class NoteSoundsAdapter{
  }
 
  //Methods
- checkOptions(noteSound){
+ checkOptions(noteSound, note){
   const optionValue = noteSound.value;
 
   const dotsContainer = document.querySelector('#dots');
@@ -14,13 +14,12 @@ class NoteSoundsAdapter{
 
     break;
    case 'first':
-    const firstDot = dotsContainer.firstElementChild;
-    this.observeDot(firstDot);
+    this.playNote(note);
     break;
    
    case 'last':
     const lastDot = dotsContainer.lastElementChild;
-    this.observeDot(lastDot);
+    this.observeDot(lastDot, note);
     break;
   
    default:
@@ -29,7 +28,7 @@ class NoteSoundsAdapter{
 
  }
 
- observeDot(childDot){
+ observeDot(childDot, note){
   // Options for the observer (which mutations to observe)
   const config = { attributes: true, childList: true, subtree: true };
 
@@ -39,11 +38,11 @@ class NoteSoundsAdapter{
    for (let mutation of mutationsList) {
     if (mutation.type === 'attributes') {
      
-     const dotsContainer = childDot.parentElement;
 
      /* Run this if something is changed on that childDot */
      if (childDot.classList.contains('dot--counted')){
-      this.playNote();  
+      this.playNote(note);  
+      observer.disconnect();
      }
 
     }
@@ -57,7 +56,6 @@ class NoteSoundsAdapter{
   // Start observing the target node for configured mutations
   observer.observe(childDot, config);
 
-
   /* Stop Button */
   const stopBtn = document.querySelector('#stop');
   
@@ -69,36 +67,13 @@ class NoteSoundsAdapter{
 
  }
 
- 
- observeParentDot(dotsContainer){
-  // Options for the observer (which mutations to observe)
-  const config = { attributes: true, childList: true, subtree: true };
 
-  // Callback function to execute when mutations are observed
-  const callback = (mutationsList, observer) => {
-   // Use traditional 'for loops' for IE 11
-   for (let mutation of mutationsList) {
-    if (mutation.type === 'attributes') {
-     
-     if (dotsContainer.classList.contains('dot--active')) {
-      console.log('true');
-     } 
+ playNote(note){
+  
+  note = note ? note.name : '';
 
-    }
-   }
-
-  };
-
-  const observer = new MutationObserver(callback);
-  // Create an observer instance linked to the callback function
-
-  // Start observing the target node for configured mutations
-  observer.observe(dotsContainer, config);
- }
-
- playNote(){
   const noteSound = new Tone.Synth().toDestination();
-  noteSound.triggerAttackRelease("C4", "8n");
+  noteSound.triggerAttackRelease(`${note}4`, "8n");
  }
 
 

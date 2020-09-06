@@ -16,16 +16,21 @@ class SetAdapter{
       /* Chromatic Scale */
       case 'chromatic':
        randomNum =  this.getRandomNum(data);
+
+       /* Draws the note and add sounds */
        UI.drawNote(data[randomNum]);
+       noteSoundsAdapter.checkOptions(noteSound, data[randomNum]);
        break;
-     
+      
       /* Natural Notes */
       case 'naturals':
        set = data.filter(val => val.type == 'natural');
        randomNum = this.getRandomNum(set);
-      
+
+       /* Draws the note and add sounds */
        UI.drawNote(set[randomNum]);
-      
+       noteSoundsAdapter.checkOptions(noteSound, set[randomNum]);
+    
        break;
 
      /* Accidental Notes */
@@ -33,7 +38,9 @@ class SetAdapter{
        set = data.filter(val => val.type == 'accidental');
        randomNum = this.getRandomNum(set);
 
+       /* Draws the note and add sounds */
        UI.drawNote(set[randomNum]);
+       noteSoundsAdapter.checkOptions(noteSound, set[randomNum]);
        break;
 
       /* Circle of Fifths */
@@ -45,7 +52,9 @@ class SetAdapter{
         set.push(data[position]);
        });
 
+       /* Draws the note and add sounds */
        UI.drawNote(set[increment]);
+       noteSoundsAdapter.checkOptions(noteSound, set[increment]);
       
        break;
       default:

@@ -13,7 +13,6 @@ class NoteController{
 
   /* Displays the initial note */
   setAdapter.fetchNoteSet(setValue, 0);
-  noteSoundsAdapter.checkOptions(noteSound);
 
   /* Displays a note for every nth seconds */
   /* Depends on what interval the user chooses */
